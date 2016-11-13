@@ -1,5 +1,9 @@
 FROM webdevops/php-apache:ubuntu-15.04
 
+RUN echo > /opt/docker/bin/service.d/dnsmasq.d/10-init.sh && \
+    echo > /opt/docker/etc/supervisor.d/dnsmasq.conf && \
+    echo > /opt/docker/bin/service.d/dnsmasq.sh
+
 RUN cd /tmp/ && \
     curl -O http://downloads.zend.com/guard/7.0.0/zend-loader-php5.6-linux-x86_64.tar.gz && \
     tar zxvf zend-loader-php5.6-linux-x86_64.tar.gz && \
