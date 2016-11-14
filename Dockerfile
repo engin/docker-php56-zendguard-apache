@@ -11,5 +11,4 @@ RUN cd /tmp/ && \
     cp zend-loader-php5.6-linux-x86_64/* /usr/lib/php5/20131226/ && \
     echo 'zend_extension=ZendGuardLoader.so' >> /etc/php5/fpm/php.ini && \
     echo 'zend_extension=ZendGuardLoader.so' >> /etc/php5/cli/php.ini && \
-    rm -rf zend-loader-php5.6-linux-x86_64
-
+    rm -rf zend-loader-php5.6-linux-x86_64*
